@@ -3,9 +3,13 @@
 
 ## 1. **Initial Reconnaissance**
 
-- **App Name**: iShallNotLetYouPwn
-- **Application Type**: iOS Mobile App
-- **Authentication Mechanism**: JWT-based
+- **Sideload Application into iOS device**: Via TrollStore, AltStore, and other sideloading services
+  ![iShallNotLetYouPwn Sideloading](./sideloading.jpg)
+- **Locate & Retrieve Application Binary Executable**: `"/private/var/containers/Bundle/Application/[unique-identifier]/[app].app/[binary]"`
+  ![iShallNotLetYouPwn Binary](./binary_location.jpg)
+- **Inspect Application & Network Behavior**
+  ![iShallNotLetYouPwn ApplicationBehavior](./application_behavior.jpg)
+  ![iShallNotLetYouPwn NetworkBehavior](./network_behavior.jpg)
 
 ---
 
@@ -17,7 +21,7 @@ Upon decompiling the binary, you will uncover critical vulnerabilities:
 
 - **Hardcoded JWT Secret**
 - **Server URL**
-- **Default User Role**: `"user"`
+![iShallNotLetYouPwn Hardcoded](./hardcoded.jpg)
 
 ---
 
@@ -26,8 +30,6 @@ Upon decompiling the binary, you will uncover critical vulnerabilities:
 The vulnerability stems from predictable token generation due to:
 
 - The **secret key** being hardcoded.
-- Signature using a **consistent HMAC method**.
-- **No additional server-side validation**.
 
 ---
 
