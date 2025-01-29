@@ -55,10 +55,11 @@ To capture the flag, follow these steps:
 
 ## 5. **Network Interception**
 
-Use a network proxy (e.g., **Burp Suite** or **Charles Proxy**) to intercept the GET request to `/flag`. Replace the `Authorization` header with the forged token.
-
+Use a network proxy (e.g., **Burp Suite**) to intercept the GET request to `/flag`. Replace the `Authorization` header with the forged token.
+![iShallNotLetYouPwn Burp](./burp.jpg)
 ---
 
 ## 6. **Flag Retrieval**
 
 Successfully sending the forged admin token will return the hidden flag.
+![iShallNotLetYouPwn Flag](./flag.jpg)
