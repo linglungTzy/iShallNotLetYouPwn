@@ -7,6 +7,7 @@
   ![iShallNotLetYouPwn Sideloading](./sideloading.jpg)
 - **Locate & Retrieve Application Binary Executable**: `"/private/var/containers/Bundle/Application/[unique-identifier]/[app].app/[binary]"`
   ![iShallNotLetYouPwn Binary](./binary_location.jpg)
+- **Bypass Jailbreak Detection Using Tools Such as Shadow**
 - **Inspect Application & Network Behavior**
   ![iShallNotLetYouPwn ApplicationBehavior](./application_behavior.jpg)
   ![iShallNotLetYouPwn NetworkBehavior](./network_behavior.jpg)
